@@ -111,20 +111,16 @@ tekstTere();
 			
             <select name="piirstiil">
 		
-			<?php if($_POST['piirstiil'] == true){ ?>
-			<option value="<?php echo $_POST['piirstiil']; ?>" selected="selected"><?php echo $_POST['piirstiil']; ?></option>
- <?php }else{ ?>
-  <option value=""> -- select -- </option>
-  <?php } ?>
-
                 <?php 	  // ?php endforeach; ?	
 				$stiilid=array("solid", "dashed", "dotted", "none", "double", "hidden", "ridge");
 				foreach($stiilid as $stiil):?>
-				
+			
                  <option value=""><?php echo $stiil;?></option>
-              
-
+             
             </select>
+			<script type="text/javascript">
+  document.getElementById('piirstiil').value = "<?php echo $_GET['piirstiil'];?>";
+</script>
 
 
             <br/>
@@ -138,10 +134,6 @@ tekstTere();
         <input type="submit" value="esita" />
 
     </form>
-	<?php
-$subject = $_POST['piirstiil[0]'];
-echo $subject; // returns "array" 
-?>
  </p>      
     
 </body>
