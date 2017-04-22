@@ -1,0 +1,42 @@
+#menu_1 {
+    width: 80px;
+    max-height: 1000px;
+    background-color: white;
+    margin: auto;
+}
+
+#menu_1 ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    border: 1px solid #555;
+}
+
+#menu_1 li a {
+    display: block;
+    height: 25px;
+    text-decoration:none;
+    margin-left: auto;
+    padding: 5px 15px;
+}
+
+#menu_1 li:hover {
+  background-color: black;
+  border: 1px solid #555;
+}
+
+#menu_2 {
+    max-width: 600px;
+    max-height: 1000px;
+    background-color: green;
+    margin: auto;
+}
+
+
+
+
+
+
+
+
+
