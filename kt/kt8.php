@@ -82,7 +82,9 @@ if (isset($_POST['piirnurk']) )
 </head>
 
 <body>
-
+<?php 
+$stiilid=array("solid", "dashed", "dotted", "none", "double", "hidden", "ridge");
+?>
 <div id="valjund">
 <?php
  function tekstTere(){
@@ -110,12 +112,10 @@ tekstTere();
             <br/>
 			
             <select name="piirstiil">
-                <?php 
-						
-				$stiilid=array("solid", "dashed", "dotted", "none", "double", "hidden", "ridge");
+                <?php 		
+			
 				foreach($stiilid as $stiil):?>
-				
-                    <option><?php echo $stiil;?></option>
+					<option><?php echo $stiil;?></option>
 			
                 <?php endforeach; ?>
 
