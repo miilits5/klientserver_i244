@@ -112,8 +112,9 @@ tekstTere();
             <input type="number" min="0" max="50" step="1" name="piirjoon" id="piirjoon" form="vorm" value="<?php if(isset($_POST['piirjoon'])) echo $_POST['piirjoon']?>">
             <label>Piirjoone laius (0-50px)</label>
             <br/>
+			
+            <select name="piirstiil">
 			<?php $_POST['piirstiil']; ?>
-            <select name="piirstiil" >
                 <?php foreach($stiilid as $stiil):?>
                     <option><?php echo $stiil;?></option>
                 <?php endforeach; ?>
