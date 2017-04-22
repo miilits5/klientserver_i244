@@ -115,8 +115,8 @@ tekstTere();
 				$test = $_POST["piirstiil"];
 				$stiilid=array("solid", "dashed", "dotted", "none", "double", "hidden", "ridge");
 				foreach($stiilid as $stiil):?>
-					<option value="solid" <?php if (isset($test) && $test=="solid") echo ' selected';?>>$stiil[0]</option>
-                    <option><?php echo $stiil;?></option>
+					<option value="solid" <?php if (isset($test) && $test=="solid") echo ' selected';?>><?php echo $stiil;?></option>
+                    <option></option>
                 <?php endforeach; ?>
 
             </select>
