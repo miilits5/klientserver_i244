@@ -133,8 +133,6 @@ tekstTere();
 
     </form>
  </p>      
-    			<script type="text/javascript">
-  document.getElementById('piirstiil').value = "<?php echo $_GET['piirstiil'];?>";
-</script>
+
 </body>
 </html>
