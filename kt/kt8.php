@@ -82,7 +82,25 @@ if (isset($_POST['piirnurk']) )
 </head>
 
 <body>
+<?php
+session_start();
+if(isset($_POST['submit'])){
+$stiil2=$_POST['piirstiil'];
+$_SESSION['piirstiil']=$stiil2;
+}
+$stiilid=array("solid", "dashed", "dotted", "none", "double", "hidden", "ridge");
 
+          
+				foreach($stiilid as $stiil){
+					if(isset($_SESSION['piirstiil']) && $_SESSION['piirstiil']==$stiil){
+    echo '<option selected value="'.$stiil.'">'.$stiil.'</option>';
+}else{
+    echo '<option value="'.$stiil.'">'.$stiil.'</option>';
+}
+}
+    echo '</select>';
+
+					?>
 <div id="valjund">
 <?php
  function tekstTere(){
@@ -110,25 +128,7 @@ tekstTere();
             <br/>
 			
             <select name="piirstiil">
-                <?php
-session_start();
-if(isset($_POST['submit'])){
-$stiil2=$_POST['piirstiil'];
-$_SESSION['piirstiil']=$stiil2;
-}
-$stiilid=array("solid", "dashed", "dotted", "none", "double", "hidden", "ridge");
-
-          
-				foreach($stiilid as $stiil){
-					if(isset($_SESSION['piirstiil']) && $_SESSION['piirstiil']==$stiil){
-    echo '<option selected value="'.$stiil.'">'.$stiil.'</option>';
-}else{
-    echo '<option value="'.$stiil.'">'.$stiil.'</option>';
-}
-}
-    echo '</select>';
-
-					?>
+                
                     <option><?php echo $stiil;?></option>
               
             </select>
