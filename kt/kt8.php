@@ -120,7 +120,7 @@ tekstTere();
 						echo '>' . $stiil . '<option />';
 						}
 				?>
-                
+                <option></opti<option><?php echo $stiil; ?></option>
             </select>
 			
             <br/>
