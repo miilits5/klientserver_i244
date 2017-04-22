@@ -113,12 +113,12 @@ tekstTere();
                 <?php
 session_start();
 if(isset($_POST['submit'])){
-$stiil=$_POST['piirstiil'];
-$_SESSION['piirstiil']=$stiil;
+$stiil2=$_POST['piirstiil'];
+$_SESSION['piirstiil']=$stiil2;
 }
 $stiilid=array("solid", "dashed", "dotted", "none", "double", "hidden", "ridge");
-echo '<form method="post">
-          <select name="piirstiil">';
+
+          
 				foreach($stiilid as $stiil){
 					if(isset($_SESSION['piirstiil']) && $_SESSION['piirstiil']==$stiil){
     echo '<option selected value="'.$stiil.'">'.$stiil.'</option>';
