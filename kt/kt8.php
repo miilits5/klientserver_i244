@@ -7,7 +7,46 @@
   <title>Kodutöö nr8</title>
   <meta name="description" content="Tarvi Kodutööd">
   <meta name="author" content="Tarvi Tihhanov">
-<link rel="stylesheet" href="../css/kt8.css">
+<style>
+
+        form {
+            
+            border-style: groove;
+            border-radius: 5px;
+            clear: both;
+            padding: 10px;
+            margin-left: 200px;
+            margin-right: 200px;
+            font-family:monospace;
+            }
+    
+        input, select{
+            
+            margin-bottom: 20px;
+        }
+        
+        input[type=submit]{
+            
+            
+        }
+        
+        #valjund {
+            
+            margin: auto;
+            padding: 10px;
+            background-color: <?php echo $_GET["taustav2rv"]; ?>;
+            color: <?php echo $_GET["tekstiv2rv"]; ?>;
+            border-width: <?php echo $_GET["piirjoon"]; ?>;
+            border-style: <?php echo $_GET["piirstiil"];?>;
+            border-radius: <?php echo $_GET["piirnurk"].'px';?>;
+            border-color: <?php echo $_GET["piirv2rv"]; ?>;
+            font-family:monospace;
+            width: 650px;
+            height: 350px;
+          
+        }
+    
+</style>
 </head>
 
 <body>
@@ -15,9 +54,8 @@
                   
 <?php  
 function tekstBoks(){  
-     if (isset($_GET['auktekstile']) && $_GET['auktekstile']!="") {
-        echo htmlspecialchars ($_GET['auktekstile']);}      
-      }
+     if (isset($_GET['auktekstile']) && $_GET['auktekstile']!=""){echo htmlspecialchars ($_GET['auktekstile']);}      
+	}
 tekstBoks();          
 ?>
 </p>   
