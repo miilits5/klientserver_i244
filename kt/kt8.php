@@ -62,7 +62,7 @@ if (isset($_POST['piirnurk']) )
 <div id="valjund"> <?php if (isset($_POST['valjund'])) echo htmlspecialchars($_POST['valjund']); ?></div>
 <hr/>     
 <p>
-   <form method="POST" action="?">
+   <form method="POST" action="kt8.php" method="get" id="valjund">
         <textarea name="text" placeholder="Siia kirjuta kommentaar"></textarea>
         <br/>
         <input type="color" name="taustav2rv" id="taustav2rv" > 
