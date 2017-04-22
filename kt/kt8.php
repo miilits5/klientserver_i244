@@ -98,7 +98,7 @@ tekstTere();
 </div>
 <hr/>     
 <p>
-   <form method="POST" action="kt8.php" id="vorm">
+   <form method="POST" action="kt8.php" method="get" id="vorm">
         <textarea name="tekstivali" form="vorm" placeholder="Siia kirjuta kommentaar"></textarea>
         <br/>
         <input type="color" name="taustav2rv" id="taustav2rv" value="<?php if(isset($_POST['taustav2rv'])) echo $_POST['taustav2rv']?>"> 
@@ -114,12 +114,17 @@ tekstTere();
             <br/>
 			
             <select name="piirstiil">
-                <?php foreach($stiilid as $stiil =>$vaartus):
-				echo '<option value="'.$stiil.'">'.$vaartus.'</option>';
-				endforeach;?>
-                    
-
-                
+                <?php foreach($stiilid as $stiil) {
+					
+					echo '<option value="'. $stiil . '"';
+						if($stiil == $_POST['piirstiil']) echo ' SELECTED';
+						echo '>' . $stiil . '<option />';
+				}
+					
+					?>
+                 
+					
+                <?php endforeach; ?>
             </select>
 			
             <br/>
