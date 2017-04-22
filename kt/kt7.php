@@ -16,12 +16,9 @@
     function peeglis ($string){
         
         echo "$string <br><br>";
-        
         for ($i = strlen($string)-1; $i >= 0; $i--){
-            
             echo substr($string, $i, 1);
-             }
-                
+             }            
     }
     
     peeglis("Korras nagu norras");
