@@ -111,7 +111,20 @@ tekstTere();
             <label>Piirjoone laius (0-50px)</label>
             <br/>
 			
+            <select name="piirstiil">
+                <?php foreach($stiilid as $stiil => $v22rtus) {
+					foreach ($v22rtus as $stii) {
+						?>
+						
+					<option value="<?php echo $stii; ?>"<?php
+					if (in_array($stii, $_POST['piirstiil'])){
+						echo selected="selected";
+					}
+					?>><?php echo $stii; ?></option>
+				}}
+                <?php endforeach; ?>
 
+            </select>
 
 
             <br/>
