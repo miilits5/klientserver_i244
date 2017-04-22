@@ -87,7 +87,11 @@ if (isset($_POST['piirnurk']) )
     $stiilid=array("solid", "dashed", "dotted", "none", "double", "hidden", "ridge");
 
     ?>
-<div id="valjund"> <?php if (isset($_POST['valjund'])) echo htmlspecialchars($_POST['valjund']); ?></div>
+<div id="valjund"> <?php
+ function tekstTere(){
+ if (isset($_GET['tekst']) && $_GET['tekst']!="") {
+        echo htmlspecialchars ($_GET['tekst']);}
+tekstTere(); ?></div>
 <hr/>     
 <p>
    <form method="POST" action="kt8.php" method="get" id="vorm">
