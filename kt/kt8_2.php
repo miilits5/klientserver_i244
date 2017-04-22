@@ -12,7 +12,7 @@
 
 <body >
     <?php
-$dir = "kt"; // kausta nimi, mida avada
+$dir = "../kt"; // kausta nimi, mida avada
 $failid = array(); // massiiv, kuhu lisatakse leitud failid
 if ($dh = opendir($dir)) { // kui funktsioon opendir vastava sisendiga õnnestub, siis jäta viide kaustale meelde muutujasse $dh ning läbi järgnev koodiblokk
   while (($file = readdir($dh)) !== false) { // seni, kuni funktsiooniga readdir vastavas kaustas saab kätte mingi kirje (fail/kaust), salvesta see kirje muutujasse $file ning läbi järgnev koodiblokk
