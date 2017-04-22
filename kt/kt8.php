@@ -101,7 +101,7 @@ tekstTere();
    <form method="POST" action="kt8.php" method="get" id="vorm">
         <textarea name="tekstivali" form="vorm" placeholder="Siia kirjuta kommentaar"></textarea>
         <br/>
-        <input type="color" name="taustav2rv" id="taustav2rv" value="<?php if(isset($_POST['taustav2rv'])) echo $_POST['taustav2rv']?>> 
+        <input type="color" name="taustav2rv" id="taustav2rv" value="<?php if(isset($_POST['taustav2rv'])) echo $_POST['taustav2rv']?>"> 
         <label for="taustav2rv">Taustavärvus</label>
         <br/>
         <input type="color" name="tekstiv2rv" id="tekstiv2rv" value="#0DFF02"> 
