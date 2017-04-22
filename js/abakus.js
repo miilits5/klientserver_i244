@@ -1,7 +1,7 @@
 window.onload = function(){
-    var muutuja = document.getElementsByClassName("bead");
-    for (var i = 0; i < muutuja.length; i++){
-        muutuja[i].onclick = function () {
+    var m = document.getElementsByClassName("bead");
+    for (var i = 0; i < m.length; i++){
+        m[i].onclick = function () {
             var beadPos = getComputedStyle(this,null).getPropertyValue("float");
             if (beadPos == "left"){
                 this.style.cssFloat = "right";
