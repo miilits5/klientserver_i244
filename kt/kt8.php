@@ -115,10 +115,10 @@ tekstTere();
 			
             <select name="piirstiil">
                 <?php foreach($stiilid as $stiil) {
-					
 					echo '<option value="'. $stiil . '"';
 						if($stiil == $_POST['piirstiil']) echo ' SELECTED';
-						echo '>' . $stiil . '<option />';}
+						echo '>' . $stiil . '<option />';
+						}
 				?>
                 
             </select>
