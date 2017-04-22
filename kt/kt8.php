@@ -91,7 +91,9 @@ if (isset($_POST['piirnurk']) )
  function tekstTere(){
  if (isset($_GET['tekst']) && $_GET['tekst']!="") {
         echo htmlspecialchars ($_GET['tekst']);}
-tekstTere(); ?></div>
+ }
+tekstTere(); ?>
+</div>
 <hr/>     
 <p>
    <form method="POST" action="kt8.php" method="get" id="vorm">
