@@ -112,7 +112,8 @@ tekstTere();
             <select name="piirstiil" selected="$_POST['piirstiil']";?>
                 <?php 
 				$stiilid=array("solid", "dashed", "dotted", "none", "double", "hidden", "ridge");
-				foreach($stiilid as $stiil);?>
+				foreach($stiilid as $stiil):?>
+				
                     <option><?php echo $stiil;?></option>
                 <?php endforeach; ?>
 
