@@ -59,14 +59,14 @@ if (isset($_POST['piirnurk']) )
         }
 
         #valjund {
-            
+            background-color: <?php echo $_GET["taustav2rv"]; ?>;
             padding: 10px;
             background: <?php echo $text_bg; ?>;
             color: <?php echo $text_color; ?>;
             border: <?php echo $border; ?>px;
             border-radius: <?php echo $border_radius; ?>px;
-            max-width: 550px;
-            min-height: 350px;
+            max-width: 450px;
+            min-height: 250px;
 
     display: block;
     margin-left: auto;
