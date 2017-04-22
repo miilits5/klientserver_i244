@@ -1,3 +1,31 @@
+<?php
+$text_bg="#fff";
+if (isset($_POST['taustav2rv'])) 
+    $text_bg = htmlspecialchars($_POST['taustav2rv']); 
+
+$text_color="#fff";
+if (isset($_POST['tekstiv2rv'])) 
+    $text_color = htmlspecialchars($_POST['tekstiv2rv']); 
+
+$border_width =2;
+if (isset($_POST['piirjoon']) ) 
+    $border_width = htmlspecialchars($_POST['piirjoon']); 
+$border_style =" solid ";
+if (isset($_POST['piirstiil']) ) 
+    $border_style = htmlspecialchars($_POST['piirstiil']); 
+$border_color =" black ";
+if (isset($_POST['piirv2rv']) ) 
+    $border_color = htmlspecialchars($_POST['piirv2rv']); 
+$border=$border_color." ".$border_style." ".$border_width; 
+
+$border_radius =10;
+if (isset($_POST['piirnurk']) ) 
+    $border_radius = htmlspecialchars($_POST['piirnurk']);
+
+?>
+
+
+
 <!doctype html>
 
 <html lang="en">
@@ -9,40 +37,16 @@
   <meta name="author" content="Tarvi Tihhanov">
 <style>
 
-        form {
-            
-            border-style: groove;
-            border-radius: 5px;
-            clear: both;
-            padding: 10px;
-            margin-left: 200px;
-            margin-right: 200px;
-            font-family:monospace;
-            }
-    
-        input, select{
-            
-            margin-bottom: 20px;
-        }
-        
-        input[type=submit]{
-            
-            
-        }
-        
+       
         #valjund {
             
-            margin: auto;
             padding: 10px;
-            background-color: <?php echo $_GET["taustav2rv"]; ?>;
-            color: <?php echo $_GET["tekstiv2rv"]; ?>;
-            border-width: <?php echo $_GET["piirjoon"]; ?>;
-            border-style: <?php echo $_GET["piirstiil"];?>;
-            border-radius: <?php echo $_GET["piirnurk"].'px';?>;
-            border-color: <?php echo $_GET["piirv2rv"]; ?>;
-            font-family:monospace;
-            width: 650px;
-            height: 350px;
+            background: <?php echo $text_bg; ?>;
+            color: <?php echo $text_color; ?>;
+            border: <?php echo $border; ?>px;
+            border-radius: <?php echo $border_radius; ?>px;
+            max-width: 350px;
+            min-height: 150px;
           
         }
     
@@ -50,48 +54,43 @@
 </head>
 
 <body>
-<p id="valjund">
-                  
-<?php  
-function tekstBoks(){  
-     if (isset($_GET['auktekstile']) && $_GET['auktekstile']!=""){echo htmlspecialchars ($_GET['auktekstile']);}      
-	}
-tekstBoks();          
-?>
-</p>   
+<?php 
 
-<p>    
-<form action="kt8.php" method="get" id="vorm">
-    <textarea name="auktekstile"  form="vorm" placeholder="Trüki siia"></textarea><br>
-    <input type="color" name="taustav2rv" value="#36040E"> Taustavärvus<br>
-    <input type="color" name="tekstiv2rv" value="#15DFD6"> Tekstivärvus<br>
-</p>   
- 
-<p>
-<b>Piirjoon: </b><br>
-                <select name="piirjoon" form="vorm"> 
-                    <option value="0px">0</option>
-                    <option value="1px">1</option>
-                    <option value="2px">2</option>
-                    <option value="5px">5</option>
-                    <option value="10px">10</option>
-                </select> Piirjoone laius<br>
-                
-                <select name="piirstiil" form="vorm">
-                    <option value="dashed">Dashed</option>
-                    <option value="double">Double</option>
-                    <option value="groove">Groove</option>
-                    <option value="hidden">Hidden</option>
-                    <option value="ridge">Ridge</option>
-                    <option value="solid">Solid</option>
-                </select>
-                    
-    <input type="color" name="piirv2rv" value="#11FA06"> Piirjoone värvus<br>
-    <input type="number" name="piirnurk" min="0" max="100" step="1"> Piirjoone nurga raadius (0-100px)<br>
-    <input type="submit" value="Esita">
-                      
-</p>
-</form> 
+    $stiilid=array("solid", "dashed", "dotted", "none", "double", "hidden", "ridge");
+
+    ?>
+<div id="valjund"> <?php if (isset($_POST['valjund'])) echo htmlspecialchars($_POST['valjund']); ?></div>
+<hr/>     
+
+   <form method="POST" action="?">
+        <textarea name="text" placeholder="Siia kirjuta kommentaar"></textarea>
+        <br/>
+        <input type="color" name="taustav2rv" id="taustav2rv" > 
+        <label for="taustav2rv">Taustavärvus</label>
+        <br/>
+        <input type="color" name="tekstiv2rv" id="tekstiv2rv" > 
+        <label for="tekstiv2rv">Tekstivärvus</label>
+        <br/>
+        <fieldset>
+            <legend>Piirjoon</legend>
+            <input type="number" min="0" max="50" step="1" name="piirjoon" id="piirjoon" >
+            <label>Piirjoone laius (0-50px)</label>
+            <br/>
+            <select name="piirstiil">
+                <?php foreach($stiilid as $stiil):?>
+                    <option><?php echo $stiil; ?></option>
+                <?php endforeach; ?>
+            </select>
+            <br/>
+            <input type="color" name="piirv2rv" id="piirv2rv" > 
+            <label for="piirv2rv">Piirjoone värvus</label>
+            <br/>
+            <input type="number" min="0" max="100" step="1" name="piirnurk" id="piirnurk" >
+            <label>Piirjoone nurga raadius (0-100px)</label>
+            <br/>
+        </fieldset>
+        <input type="submit" value="esita" />
+    </form>
         
     
 </body>
