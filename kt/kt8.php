@@ -114,12 +114,10 @@ tekstTere();
             <br/>
             <select id="piirstiil" name="piirstiil" >
                 <?php foreach($stiilid as $stiil):?>
-                    <option><?php echo $stiil; ?></option>
+                    <option><?php echo $stiil; echo $_POST['piirstiil']; ?></option>
                 <?php endforeach; ?>
             </select>
-			<?php
-echo $_GET['piirstiil'];
-?>
+			
             <br/>
             <input type="color" name="piirv2rv" id="piirv2rv" form="vorm" value="<?php if(isset($_POST['piirv2rv'])) echo $_POST['piirv2rv']?>"> 
             <label for="piirv2rv">Piirjoone värvus</label>
