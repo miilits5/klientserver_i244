@@ -114,7 +114,7 @@ tekstTere();
             <br/>
             <select name="piirstiil">
                 <?php foreach($stiilid as $stiil):?>
-                    <option  value="" selected="selected"><?php echo $stiil; ?></option>
+                    <option  onchange="change_later_selects(this);"><?php echo $stiil; ?></option>
                 <?php endforeach; ?>
             </select>
             <br/>
