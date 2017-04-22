@@ -114,10 +114,12 @@ tekstTere();
             <br/>
 			
             <select name="piirstiil">
-                <?php foreach($stiilid as $stiil):?>
-                    <option><?php echo $stiil;?></option>
+                <?php foreach($stiilid as $stiil =>$vaartus):
+				echo '<option value="'.$stiil.'">'.$vaartus.'</option>';
+				endforeach;?>
+                    
 
-                <?php endforeach; ?>
+                
             </select>
 			
             <br/>
