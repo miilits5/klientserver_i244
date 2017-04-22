@@ -104,24 +104,24 @@ tekstTere();
         <input type="color" name="taustav2rv" id="taustav2rv" value="<?php if(isset($_POST['taustav2rv'])) echo $_POST['taustav2rv']?>"> 
         <label for="taustav2rv">Taustavärvus</label>
         <br/>
-        <input type="color" name="tekstiv2rv" id="tekstiv2rv" value="#0DFF02"> 
+        <input type="color" name="tekstiv2rv" id="tekstiv2rv" value="<?php if(isset($_POST['tekstiv2rv'])) echo $_POST['tekstiv2rv']?>"> 
         <label for="tekstiv2rv">Tekstivärvus</label>
         <br/>
         <fieldset>
             <legend>Piirjoon</legend>
-            <input type="number" min="0" max="50" step="1" name="piirjoon" id="piirjoon" form="vorm" >
+            <input type="number" min="0" max="50" step="1" name="piirjoon" id="piirjoon" form="vorm" value="<?php if(isset($_POST['piirjoon'])) echo $_POST['piirjoon']?>">
             <label>Piirjoone laius (0-50px)</label>
             <br/>
-            <select name="piirstiil">
+            <select name="piirstiil" value="<?php if(isset($_POST['piirstiil'])) echo $_POST['piirstiil']?>">
                 <?php foreach($stiilid as $stiil):?>
                     <option><?php echo $stiil; ?></option>
                 <?php endforeach; ?>
             </select>
             <br/>
-            <input type="color" name="piirv2rv" id="piirv2rv" form="vorm"> 
+            <input type="color" name="piirv2rv" id="piirv2rv" form="vorm" value="<?php if(isset($_POST['piirv2rv'])) echo $_POST['piirv2rv']?>"> 
             <label for="piirv2rv">Piirjoone värvus</label>
             <br/>
-            <input type="number" min="0" max="100" step="1" name="piirnurk" id="piirnurk" >
+            <input type="number" min="0" max="100" step="1" name="piirnurk" id="piirnurk" value="<?php if(isset($_POST['piirnurk'])) echo $_POST['piirnurk']?>">
             <label>Piirjoone nurga raadius (0-100px)</label>
             <br/>
         </fieldset>
