@@ -130,7 +130,7 @@ echo '<form method="post">
 
 					?>
                     <option><?php echo $stiil;?></option>
-                <?php endforeach; ?>
+              
             </select>
 		
 
