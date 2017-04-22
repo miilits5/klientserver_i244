@@ -1,0 +1,48 @@
+p {
+    font-size: 10px;
+}
+
+p#roheline {
+    color: green;
+}
+p#joonitud {
+    text-decoration: underline;
+}
+
+p#troheline {
+    background-color: #006400;
+}
+p#2korda {
+    font-size: 20px;
+}
+p#monoscape {
+    font-family: monospace;
+}
+p#mustpaks {
+    background-color: yellow;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: black;
+}
+
+p#umar {
+    border-style: dashed;
+    border-radius: 7px;
+    border-width: thin;
+}
+p#kaldkesk {
+    text-align: center;
+    font-style: italic;
+}
+
+p#kursor {
+    cursor:crosshair;
+}
+
+
+
+
+
+
+
+
+
