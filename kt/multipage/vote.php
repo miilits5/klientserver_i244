@@ -10,7 +10,7 @@ $pildid = range(1,6);
 	foreach($pildid as $value){
 		echo "<p>
 		<label for='p$value'>
-				<img src='pildid/nameless$value.jpg' alt='nimetu $value' height='200'/>
+				<img src='pildid/nameless$value.jpg' alt='nimetu $value' height='50'/>
 				</label>
 				<input type='radio' value='$value' id='p$value' name='pilt'/>
 			</p>";
