@@ -118,10 +118,8 @@ tekstTere();
 					
 					echo '<option value="'. $stiil . '"';
 						if($stiil == $_POST['piirstiil']) echo ' SELECTED';
-						echo '>' . $stiil . '<option />';
-				}
-					
-					?>
+						echo '>' . $stiil . '<option />';}
+				?>
                 
             </select>
 			
