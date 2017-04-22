@@ -82,11 +82,7 @@ if (isset($_POST['piirnurk']) )
 </head>
 
 <body>
-<?php 
 
-    $stiilid=array("solid", "dashed", "dotted", "none", "double", "hidden", "ridge");
-
-    ?>
 <div id="valjund">
 <?php
  function tekstTere(){
@@ -113,14 +109,30 @@ tekstTere();
             <label>Piirjoone laius (0-50px)</label>
             <br/>
 			
-            <select name="piirstiil [ ]">
-                <?php foreach($stiilid as $stiil):?>
+            <select name="piirstiil">
+                <?php
+session_start();
+if(isset($_POST['submit'])){
+$stiil=$_POST['piirstiil'];
+$_SESSION['piirstiil']=$stiil;
+}
+$stiilid=array("solid", "dashed", "dotted", "none", "double", "hidden", "ridge");
+echo '<form method="post">
+          <select name="piirstiil">';
+				foreach($stiilid as $stiil){
+					if(isset($_SESSION['piirstiil']) && $_SESSION['piirstiil']==$stiil){
+    echo '<option selected value="'.$stiil.'">'.$stiil.'</option>';
+}else{
+    echo '<option value="'.$stiil.'">'.$stiil.'</option>';
+}
+}
+    echo '</select>';
+
+					?>
                     <option><?php echo $stiil;?></option>
                 <?php endforeach; ?>
             </select>
-			<script type="text/javascript">
-  document.getElementById('piirstiil').value = "<?php echo $_POST['piirstiil'];?>";
-</script>
+		
 
             <br/>
             <input type="color" name="piirv2rv" id="piirv2rv" form="vorm" value="<?php if(isset($_POST['piirv2rv'])) echo $_POST['piirv2rv']?>"> 
@@ -134,5 +146,5 @@ tekstTere();
     </form>
  </p>      
     
-</body>
+int</body>
 </html>
