@@ -87,12 +87,14 @@ if (isset($_POST['piirnurk']) )
     $stiilid=array("solid", "dashed", "dotted", "none", "double", "hidden", "ridge");
 
     ?>
-<div id="valjund"> <?php
+<div id="valjund">
+<?php
  function tekstTere(){
- if (isset($_GET['tekst']) && $_GET['tekst']!="") {
-        echo htmlspecialchars ($_GET['tekst']);}
+ if (isset($_POST['tekst']) && $_POST['tekst']!="") {
+        echo htmlspecialchars ($_POST['tekst']);}
  }
-tekstTere(); ?>
+tekstTere(); 
+?>
 </div>
 <hr/>     
 <p>
