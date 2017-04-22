@@ -90,8 +90,8 @@ if (isset($_POST['piirnurk']) )
 <div id="valjund">
 <?php
  function tekstTere(){
- if (isset($_POST['tekst']) && $_POST['tekst']!="") {
-        echo htmlspecialchars ($_POST['tekst']);}
+ if (isset($_POST['tekstivali']) && $_POST['tekstivali']!="") {
+        echo htmlspecialchars ($_POST['tekstivali']);}
  }
 tekstTere(); 
 ?>
@@ -99,7 +99,7 @@ tekstTere();
 <hr/>     
 <p>
    <form method="POST" action="kt8.php" method="get" id="vorm">
-        <textarea name="valjund" form="vorm" placeholder="Siia kirjuta kommentaar"></textarea>
+        <textarea name="tekstivali" form="vorm" placeholder="Siia kirjuta kommentaar"></textarea>
         <br/>
         <input type="color" name="taustav2rv" id="taustav2rv" value="#FF2102"> 
         <label for="taustav2rv">Taustavärvus</label>
