@@ -109,13 +109,14 @@ tekstTere();
             <label>Piirjoone laius (0-50px)</label>
             <br/>
 			
-            <select name="piirstiil">
+            <select name="piirstiil" selected="$test">
                 <?php 
 						
 				$test = $_POST["piirstiil"];
 				$stiilid=array("solid", "dashed", "dotted", "none", "double", "hidden", "ridge");
 				foreach($stiilid as $stiil):?>
 					<option value="solid" <?php if (isset($test) && $test=="solid") echo ' selected';?>><?php echo $stiil;?></option>
+					<option value="dashed" <?php if (isset($test) && $test=="dashed") echo ' selected';?>><?php echo $stiil;?></option>
                     <option></option>
                 <?php endforeach; ?>
 
