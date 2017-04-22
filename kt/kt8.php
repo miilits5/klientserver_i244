@@ -114,7 +114,7 @@ tekstTere();
             <br/>
             <select name="piirstiil">
                 <?php foreach($stiilid as $stiil):?>
-                    <option  value="<?php if(isset($_POST['piirstiil'])) echo $_POST['piirstiil']?>"></option>
+                    <option  value="" selected="selected"><?php echo $stiil; ?></option>
                 <?php endforeach; ?>
             </select>
             <br/>
