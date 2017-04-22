@@ -6,6 +6,7 @@ require_once('head.html');
 	<form action="tulemus.php" method="GET">
 		<p>
 <?php
+$pildid = range(1,6);
 	foreach($pildid as $value){
 		echo "<p>
 		<label for='p$value'>
