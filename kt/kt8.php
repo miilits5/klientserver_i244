@@ -61,7 +61,7 @@ if (isset($_POST['piirnurk']) )
     ?>
 <div id="valjund"> <?php if (isset($_POST['valjund'])) echo htmlspecialchars($_POST['valjund']); ?></div>
 <hr/>     
-
+<p>
    <form method="POST" action="?">
         <textarea name="text" placeholder="Siia kirjuta kommentaar"></textarea>
         <br/>
@@ -91,7 +91,7 @@ if (isset($_POST['piirnurk']) )
         </fieldset>
         <input type="submit" value="esita" />
     </form>
-        
+ </p>      
     
 </body>
 </html>
