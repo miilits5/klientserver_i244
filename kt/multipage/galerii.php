@@ -5,6 +5,7 @@ require_once('head.html');
 	<h3>Fotod</h3>
 	<div id="gallery">
 		<?php 
+		$pildid = range(1,6);
 		foreach ($pildid as $value){
 		echo "<img src='pildid/nameless$value.jpg' alt='nimetu $value.'>";
 		

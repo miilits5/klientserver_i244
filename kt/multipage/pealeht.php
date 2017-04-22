@@ -1,6 +1,7 @@
 <?php 
 require_once('head.html');
 ?>
+
 <div id="wrap">
 	<h3>Minu galerii</h3>
 	<p>Tere tulemast minu galerii lehele. Siin saad näha minu katseid fotograafias ning nende hulgast oma lemmiku valida.</p>
