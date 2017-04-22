@@ -8,7 +8,7 @@ require_once('head.html');
 if (!empty($_GET)){ 
 	echo "Valik saadetud!";
 	} else {
-		echo "Valik on pooleli!";
+		echo "Palun vali mõni pilt ka ikka enne kui hääled saadad";
 	}
 ?>
 </p>

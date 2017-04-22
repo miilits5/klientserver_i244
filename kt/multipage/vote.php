@@ -2,7 +2,7 @@
 require_once('head.html');
 ?>
 <div id="wrap">
-	<h3>Vali oma lemmik :)</h3>
+	<h3>Vali lemmar pilt</h3>
 	<form action="tulemus.php" method="GET">
 		
 <?php
