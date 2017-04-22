@@ -82,18 +82,18 @@ if (isset($_POST['piirnurk']) )
 <div id="valjund"> <?php if (isset($_POST['valjund'])) echo htmlspecialchars($_POST['valjund']); ?></div>
 <hr/>     
 <p>
-   <form method="POST" action="kt8.php" method="get">
-        <textarea name="valjund" placeholder="Siia kirjuta kommentaar"></textarea>
+   <form method="POST" action="kt8.php" method="get" id="vorm">
+        <textarea name="valjund" form="vorm" placeholder="Siia kirjuta kommentaar"></textarea>
         <br/>
-        <input type="color" name="taustav2rv" id="taustav2rv" > 
+        <input type="color" name="taustav2rv" id="taustav2rv" value="#FF2102"> 
         <label for="taustav2rv">Taustavärvus</label>
         <br/>
-        <input type="color" name="tekstiv2rv" id="tekstiv2rv" > 
+        <input type="color" name="tekstiv2rv" id="tekstiv2rv" value="#0DFF02"> 
         <label for="tekstiv2rv">Tekstivärvus</label>
         <br/>
         <fieldset>
             <legend>Piirjoon</legend>
-            <input type="number" min="0" max="50" step="1" name="piirjoon" id="piirjoon" >
+            <input type="number" min="0" max="50" step="1" name="piirjoon" id="piirjoon" form="vorm" >
             <label>Piirjoone laius (0-50px)</label>
             <br/>
             <select name="piirstiil">
@@ -102,7 +102,7 @@ if (isset($_POST['piirnurk']) )
                 <?php endforeach; ?>
             </select>
             <br/>
-            <input type="color" name="piirv2rv" id="piirv2rv" > 
+            <input type="color" name="piirv2rv" id="piirv2rv" form="vorm"> 
             <label for="piirv2rv">Piirjoone värvus</label>
             <br/>
             <input type="number" min="0" max="100" step="1" name="piirnurk" id="piirnurk" >
