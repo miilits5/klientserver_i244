@@ -118,7 +118,10 @@ tekstTere();
                     <option><?php echo $stiil;?></option>
                 <?php endforeach; ?>
             </select>
-			
+			<script type="text/javascript">
+  document.getElementById('piirstiil').value = "<?php echo $_POST['piirstiil'];?>";
+</script>
+
             <br/>
             <input type="color" name="piirv2rv" id="piirv2rv" form="vorm" value="<?php if(isset($_POST['piirv2rv'])) echo $_POST['piirv2rv']?>"> 
             <label for="piirv2rv">Piirjoone värvus</label>
