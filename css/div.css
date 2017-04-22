@@ -101,13 +101,13 @@ body {
 }
 
 .bead:nth-child(3) {
-  float:right;
+  float:left;
 }
 .bead:nth-child(4) {
   float:right;
 }
 .bead:nth-child(5) {
-  float:right;
+  float:left;
   
 }
 .bead:nth-child(6) {
