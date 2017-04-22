@@ -115,7 +115,7 @@ tekstTere();
 				$stiilid=array("solid", "dashed", "dotted", "none", "double", "hidden", "ridge");
 				foreach($stiilid as $stiil):?>
 			
-                 <option value=""><?php echo $stiil;?></option>
+                 <option><?php echo $stiil;?></option>
              
             </select>
 
