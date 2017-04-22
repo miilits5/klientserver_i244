@@ -67,13 +67,13 @@ if (isset($_POST['piirnurk']) )
             border-radius: <?php echo $border_radius; ?>px;
             max-width: 350px;
             min-height: 150px;
-          
-        }
-    textarea {
+
     display: block;
     margin-left: auto;
     margin-right: auto;
-}
+
+        }
+    
 </style>
 </head>
 
