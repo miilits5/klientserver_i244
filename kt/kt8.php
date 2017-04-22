@@ -83,7 +83,7 @@ if (isset($_POST['piirnurk']) )
 <hr/>     
 <p>
    <form method="POST" action="kt8.php" method="get">
-        <textarea name="text" placeholder="Siia kirjuta kommentaar"></textarea>
+        <textarea name="valjund" placeholder="Siia kirjuta kommentaar"></textarea>
         <br/>
         <input type="color" name="taustav2rv" id="taustav2rv" > 
         <label for="taustav2rv">Taustavärvus</label>
