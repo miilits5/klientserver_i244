@@ -85,7 +85,7 @@ if (isset($_POST['piirnurk']) )
 <?php 
 
     $stiilid=array("solid", "dashed", "dotted", "none", "double", "hidden", "ridge");
-
+error_reporting(E_ALL ^ E_NOTICE);
     ?>
 <div id="valjund">
 <?php
