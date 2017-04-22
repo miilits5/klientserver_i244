@@ -109,28 +109,15 @@ tekstTere();
             <label>Piirjoone laius (0-50px)</label>
             <br/>
 			
-            <select name="piirstiil">
-                <?php
-session_start();
-if(isset($_POST['submit'])){
-$stiil=$_POST['piirstiil'];
-$_SESSION['piirstiil']=$stiil;
-}
-$stiilid=array("solid", "dashed", "dotted", "none", "double", "hidden", "ridge");
+            <select name="piirstiil" selected="$_POST['piirstiil']";?>
+                <?php 
+				$stiilid=array("solid", "dashed", "dotted", "none", "double", "hidden", "ridge");
+				foreach($stiilid as $stiil){]:?>
+                    <option><?php echo $stiil;?></option>
+                <?php endforeach; ?>
 
-          
-				foreach($stiilid as $stiil){
-					if(isset($_SESSION['piirstiil']) && $_SESSION['piirstiil']==$stiil){
-    echo '<option selected value="'.$stiil.'">'.$stiil.'</option>';
-}else{
-    echo '<option value="'.$stiil.'">'.$stiil.'</option>';
-}
-}
-    echo '</select>';
+            </select>
 
-					
-            
-		?>
 
             <br/>
             <input type="color" name="piirv2rv" id="piirv2rv" form="vorm" value="<?php if(isset($_POST['piirv2rv'])) echo $_POST['piirv2rv']?>"> 
@@ -144,5 +131,5 @@ $stiilid=array("solid", "dashed", "dotted", "none", "double", "hidden", "ridge")
     </form>
  </p>      
     
-int</body>
+</body>
 </html>
