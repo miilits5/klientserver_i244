@@ -69,7 +69,11 @@ if (isset($_POST['piirnurk']) )
             min-height: 150px;
           
         }
-    
+    textarea {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 </style>
 </head>
 
