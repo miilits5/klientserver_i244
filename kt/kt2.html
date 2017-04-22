@@ -73,7 +73,7 @@
 <br>
 
 
-<form action="/klientserver_i244/kt/kt2.html" method="get" target="_self">
+<form action="kt2.html" method="get" target="_self">
   <table border=1>
   <tr><td>Vanus</td><td><input type="text" name="age"></td></tr>
   <tr><td>Hüüdnimi</td><td><input type="text" name="coolname"></td></tr>
@@ -85,6 +85,19 @@
   <tr><td colspan=2><input type="submit" value="Edasta"></td></tr>
   </table>
 </form>
+<br>
+<form action="kt2.php" method="post" target="_self">
+        <select name="Tagasiside">
+            <option value="2">Meeldib</option>
+            <option value="1">OK</option>
+            <option value="0">EI meeldi</option>
+        </select>
+        <br>
+        <p>Palun selgitagee: </p>
+        <textarea name="text" id="textarea" cols="45" rows="5"></textarea>
+        <br>
+        <input type="submit" value="Edasta">
+  </form>
 
 <br>
 <p>
