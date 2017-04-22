@@ -65,14 +65,18 @@ if (isset($_POST['piirnurk']) )
             color: <?php echo $text_color; ?>;
             border: <?php echo $border; ?>px;
             border-radius: <?php echo $border_radius; ?>px;
-            max-width: 350px;
-            min-height: 150px;
+            max-width: 550px;
+            min-height: 350px;
 
     display: block;
     margin-left: auto;
     margin-right: auto;
 
         }
+		textarea {
+  width: 300px;
+  height: 150px;
+}
     
 </style>
 </head>
