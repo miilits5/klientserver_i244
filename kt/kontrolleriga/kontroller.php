@@ -1,6 +1,7 @@
 <?php 
 require_once('head.html');
-
+?>
+<?php 
 $nr = range (1,6);
 $pildid = array();
 foreach ($nr as $value){
