@@ -32,12 +32,9 @@ At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praese
 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
 
 $array = explode("\n", $text);
-     
-    foreach ($array as &$value){
-        
-       $value = "<p><span>".$value[0]."</span>".substr($value, 1)."</p>";
-        
-        echo $value;
+    foreach ($array as &$vaartus){
+       $vaartus = "<p><span>".$vaartus[0]."</span>".substr($vaartus, 1)."</p>";
+        echo $vaartus;
     }
 
 ?>
