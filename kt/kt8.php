@@ -128,11 +128,9 @@ $stiilid=array("solid", "dashed", "dotted", "none", "double", "hidden", "ridge")
 }
     echo '</select>';
 
-					?>
-                    <option><?php echo $stiil;?></option>
-              
-            </select>
-		
+					
+            
+		?>
 
             <br/>
             <input type="color" name="piirv2rv" id="piirv2rv" form="vorm" value="<?php if(isset($_POST['piirv2rv'])) echo $_POST['piirv2rv']?>"> 
