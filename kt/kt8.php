@@ -122,9 +122,7 @@ tekstTere();
 				}
 					
 					?>
-                 
-					
-                <?php endforeach; ?>
+                
             </select>
 			
             <br/>
