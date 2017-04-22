@@ -133,10 +133,6 @@ tekstTere();
         <input type="submit" value="esita" />
 
     </form>
-	<?php
-$subject = $_POST['piirstiil[0]'];
-echo $subject; // returns "array"
-?>
  </p>      
     
 </body>
