@@ -83,8 +83,10 @@ if (isset($_POST['piirnurk']) )
 
 <body>
 <?php 
-$stiilid=array("solid", "dashed", "dotted", "none", "double", "hidden", "ridge");
-?>
+
+    $stiilid=array("solid", "dashed", "dotted", "none", "double", "hidden", "ridge");
+
+    ?>
 <div id="valjund">
 <?php
  function tekstTere(){
@@ -112,21 +114,12 @@ tekstTere();
             <br/>
 			
             <select name="piirstiil">
-                <?php foreach($stiilid as $stiil => $v22rtus) {
-					foreach ($v22rtus as $stii) {
-						?>
-						
-					<option value="<?php echo $stii; ?>"<?php
-					if (in_array($stii, $_POST['piirstiil'])){
-						echo selected="selected";
-					}
-					?>><?php echo $stii; ?></option>
-				}}
+                <?php foreach($stiilid as $stiil):?>
+                    <option><?php echo $stiil;?></option>
+
                 <?php endforeach; ?>
-
             </select>
-
-
+			
             <br/>
             <input type="color" name="piirv2rv" id="piirv2rv" form="vorm" value="<?php if(isset($_POST['piirv2rv'])) echo $_POST['piirv2rv']?>"> 
             <label for="piirv2rv">Piirjoone värvus</label>
@@ -136,7 +129,6 @@ tekstTere();
             <br/>
         </fieldset>
         <input type="submit" value="esita" />
-
     </form>
  </p>      
     
