@@ -113,8 +113,8 @@ tekstTere();
             <label>Piirjoone laius (0-50px)</label>
             <br/>
 			
-            <select name="piirstiil">
-                <?php foreach($_POST['piirstiil'] as $stiil):?>
+            <select name="piirstiil [ ]">
+                <?php foreach($stiilid as $stiil):?>
                     <option><?php echo $stiil;?></option>
                 <?php endforeach; ?>
             </select>
