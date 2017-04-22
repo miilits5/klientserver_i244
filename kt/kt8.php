@@ -37,7 +37,27 @@ if (isset($_POST['piirnurk']) )
   <meta name="author" content="Tarvi Tihhanov">
 <style>
 
-       
+       form {
+            
+            border-style: groove;
+            border-radius: 3px;
+            clear: both;
+            padding: 10px;
+            margin-left: 400px;
+            margin-right: 400px;
+            font-family:monospace;
+            }
+    
+        input, select{
+            
+            margin-bottom: 20px;
+        }
+        
+        input[type=submit]{
+            
+            
+        }
+
         #valjund {
             
             padding: 10px;
@@ -62,7 +82,7 @@ if (isset($_POST['piirnurk']) )
 <div id="valjund"> <?php if (isset($_POST['valjund'])) echo htmlspecialchars($_POST['valjund']); ?></div>
 <hr/>     
 <p>
-   <form method="POST" action="kt8.php" method="get" id="valjund">
+   <form method="POST" action="kt8.php" method="get">
         <textarea name="text" placeholder="Siia kirjuta kommentaar"></textarea>
         <br/>
         <input type="color" name="taustav2rv" id="taustav2rv" > 
