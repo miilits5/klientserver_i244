@@ -109,16 +109,17 @@ tekstTere();
             <label>Piirjoone laius (0-50px)</label>
             <br/>
 			
-            <select name="piirstiil">
-		
-                <?php 	  // ?php endforeach; ?	
+            <select name="piirstiil[]">
+                <?php 
+						
 				$stiilid=array("solid", "dashed", "dotted", "none", "double", "hidden", "ridge");
 				foreach($stiilid as $stiil):?>
+				
+                    <option><?php echo $stiil;?></option>
 			
-                 <option><?php echo $stiil;?></option>
-             
-            </select>
+                <?php endforeach; ?>
 
+            </select>
 
 
             <br/>
@@ -132,7 +133,11 @@ tekstTere();
         <input type="submit" value="esita" />
 
     </form>
+	<?php
+$subject = $_POST['piirstiil[0]'];
+echo $subject; // returns "array"
+?>
  </p>      
-
+    
 </body>
 </html>
