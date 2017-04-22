@@ -15,7 +15,7 @@
             border-radius: 5px;
             clear: both;
             padding: 10px;
-            margin-left: 250px;
+            margin-left: 600px;
             margin-right: 250px;
             font-family:monospace;
             }
@@ -76,18 +76,15 @@
     <textarea name="auktekstile"  form="vorm" placeholder="Trüki siia"></textarea><br>
     <input type="color" name="taustav2rv" value="#36040E"> Taustavärvus<br>
     <input type="color" name="tekstiv2rv" value="#15DFD6"> Tekstivärvus<br>
-</p>
-            
+</p>    
 <p>
-<b>Piirjoon</b><br>
+<b>Piirjoon: </b><br>
                 <select name="piirjoon" form="vorm"> 
                     <option value="0px">0</option>
+                    <option value="1px">1</option>
                     <option value="2px">2</option>
-                    <option value="4px">4</option>
-                    <option value="6px">6</option>
-                    <option value="8px">8</option>
+                    <option value="5px">5</option>
                     <option value="10px">10</option>
-                    <option value="12px">12</option>    
                 </select> Piirjoone laius<br>
                 
                 <select name="piirstiil" form="vorm">
@@ -104,10 +101,8 @@
                 <input type="submit" value="Esita">
                       
 </p>
-            
-        
-         </form> 
+</form> 
         
     
-    </body>
+</body>
 </html>
