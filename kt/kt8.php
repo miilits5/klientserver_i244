@@ -118,9 +118,7 @@ tekstTere();
                  <option value=""><?php echo $stiil;?></option>
              
             </select>
-			<script type="text/javascript">
-  document.getElementById('piirstiil').value = "<?php echo $_GET['piirstiil'];?>";
-</script>
+
 
 
             <br/>
@@ -135,6 +133,8 @@ tekstTere();
 
     </form>
  </p>      
-    
+    			<script type="text/javascript">
+  document.getElementById('piirstiil').value = "<?php echo $_GET['piirstiil'];?>";
+</script>
 </body>
 </html>
