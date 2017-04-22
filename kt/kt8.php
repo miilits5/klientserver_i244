@@ -114,7 +114,6 @@ tekstTere();
             <br/>
 			
             <select name="piirstiil">
-			<?php $_POST['piirstiil']; ?>
                 <?php foreach($_POST['piirstiil'] as $stiil):?>
                     <option><?php echo $stiil;?></option>
                 <?php endforeach; ?>
