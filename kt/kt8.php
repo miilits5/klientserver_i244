@@ -109,7 +109,7 @@ tekstTere();
             <label>Piirjoone laius (0-50px)</label>
             <br/>
 			
-            <select name="piirstiil" selected="$_POST['piirstiil']";?>
+            <select name="piirstiil">
                 <?php 
 				$stiilid=array("solid", "dashed", "dotted", "none", "double", "hidden", "ridge");
 				foreach($stiilid as $stiil):?>
