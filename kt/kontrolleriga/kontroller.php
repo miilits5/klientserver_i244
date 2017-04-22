@@ -7,11 +7,11 @@ $pildid = array();
 foreach ($nr as $value){
 	$pildid[] = ("<img src='pildid/nameless$value.jpg' alt='nimetu $value' />"); 
 }
-$leht = "";
-if (!empty($_GET["leht"])){
-	$leht = $_GET["leht"];
+$page = "";
+if (!empty($_GET["page"])){
+	$page = $_GET["page"];
 }
-switch($leht){
+switch($page){
 	case "galerii":
 		include("galerii.html");
 	break;
@@ -25,5 +25,6 @@ switch($leht){
 		include("pealeht.html");
 	break;
 }
+
 require_once('foot.html');
 ?>
