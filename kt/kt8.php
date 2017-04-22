@@ -112,11 +112,14 @@ tekstTere();
             <input type="number" min="0" max="50" step="1" name="piirjoon" id="piirjoon" form="vorm" value="<?php if(isset($_POST['piirjoon'])) echo $_POST['piirjoon']?>">
             <label>Piirjoone laius (0-50px)</label>
             <br/>
-            <select name="piirstiil">
+            <select id="piirstiil" name="piirstiil" >
                 <?php foreach($stiilid as $stiil):?>
-                    <option  onchange="change_later_selects(this);"><?php echo $stiil; ?></option>
+                    <option><?php echo $stiil; ?></option>
                 <?php endforeach; ?>
             </select>
+			<?php
+echo $_GET['piirstiil'];
+?>
             <br/>
             <input type="color" name="piirv2rv" id="piirv2rv" form="vorm" value="<?php if(isset($_POST['piirv2rv'])) echo $_POST['piirv2rv']?>"> 
             <label for="piirv2rv">Piirjoone värvus</label>
