@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS `<sinu kasutajanimi/kood>_loomaaed` (
+CREATE TABLE IF NOT EXISTS `ttihhano10142660_loomaaed` (
   `id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
   `nimi` varchar(100) NOT NULL,
   `puur` int(11) NOT NULL,
@@ -6,7 +6,7 @@ CREATE TABLE IF NOT EXISTS `<sinu kasutajanimi/kood>_loomaaed` (
 );
 
 
-INSERT INTO `<sinu kasutajanimi/kood>_loomaaed` (`id`, `nimi`, `puur`, `liik`) VALUES
+INSERT INTO `ttihhano10142660_loomaaed` (`id`, `nimi`, `puur`, `liik`) VALUES
 (1, 'Olaf', 8, 'pildid/bear.png'),
 (2, 'Kassper', 2, 'pildid/cat.png'),
 (3, 'Kaarel', 2, 'pildid/cat.png'),
