@@ -47,6 +47,9 @@ function kuva_puurid(){
 	}
 	print_r($puurinr);
 	print_r($puurid);
+	print_r($row);
+	print_r($row2);
+
 
 	include_once('views/puurid.html');
 	
