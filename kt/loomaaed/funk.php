@@ -33,19 +33,15 @@ function kuva_puurid(){
 	$kysimine = "SELECT DISTINCT(puur) FROM ttihhano10142660_loomaaed";
 	$nimed = "SELECT * FROM ttihhano10142660_loomaaed";
 	$tulemus = mysqli_query($connection, $kysimine);
-	$tulemus2 = mysqli_query($connection, $nimed);
 	$row = mysqli_fetch_assoc($tulemus);
-	$row2 = mysqli_fetch_assoc($tulemus2);
 	$puurid = array();
 	
 	while ($row = mysqli_fetch_assoc($tulemus)){
-		$puurinumber[] = $row;
+		$puurid[] = $row;
 	}
-	while ($row2 = mysqli_fetch_assoc($tulmus2)){
-		$nimed[] = $row2;
-	}
+
 	
-	print_r($puurinumber);
+	print_r($puurid);
 
 	include_once('views/puurid.html');
 	
