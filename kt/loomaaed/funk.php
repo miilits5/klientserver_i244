@@ -23,7 +23,7 @@ function logout(){
 }
 
 function kuva_puurid(){
-	$tulemus = mysqli_query($connection, "SELECT DISTINCT(puur) FROM ttihhano10142660_loomaaed");
+	$tulemus = mysqli_query($connection, "SELECT DISTINCT(puur) FROM ttihhano10142660_loomaaed") or die("Ei saanud baasi utf-8-sse - ".mysqli_error($connection));
 	$kuvaPuurid = array() or die(mysql_error());
 	
 	$index = 0;
