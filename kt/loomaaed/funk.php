@@ -1,8 +1,4 @@
 <?php
-	$host="localhost";
-	$user="test";
-	$pass="t3st3r123";
-	$db="test";
 
 function connect_db(){
 	global $connection;
@@ -26,6 +22,7 @@ function logout(){
 	header("Location: ?");
 }
 
+echo $connection;
 function kuva_puurid(){
 	$SQLorder = "SELECT DISTINCT(puur) FROM ttihhano10142660_loomaaed";
 	$tulemus = mysqli_query($connection, $SQLorder);
