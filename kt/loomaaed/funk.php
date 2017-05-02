@@ -28,12 +28,14 @@ function kuva_puurid(){
 	$pass="t3st3r123";
 	$db="test";
 	$connection = mysqli_connect($host, $user, $pass, $db) or die("ei saa ühendust mootoriga- ".mysqli_error());
+	
+	
 	$kysimine = "SELECT  DISTINCT(puur) FROM ttihhano10142660_loomaaed";
 	$tulemus = mysqli_query($connection, $kysimine);
 	$puurid = array() or die(mysql_error());
 	
 	while($row = mysql_fetch_array($tulemus, MYSQL_ASSOC)){
-		array_push($puurid,$row);
+		array_push($puurid, $row);
 	}
 	mysql_free_result($tulemus);
 
@@ -43,6 +45,8 @@ function kuva_puurid(){
 	include_once('views/puurid.html');
 echo '<pre>';
 print_r($puurid);
+print_r($tulemus);
+print_r($kysimine);
 echo '</pre>';
 	
 }

@@ -16,7 +16,6 @@ switch($page){
 	break;
 	case "loomad":
 		kuva_puurid();
-		include_once('views/puurid.html');
 	break;
 	case "logout":
 		logout();
