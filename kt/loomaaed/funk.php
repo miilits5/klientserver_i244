@@ -38,11 +38,12 @@ function kuva_puurid(){
 	mysql_free_result($tulemus);
 
 	// siia on vaja funktsionaalsust
-	echo '<pre>';
-print_r($puurid);
-echo '</pre>';
+
 
 	include_once('views/puurid.html');
+		echo '<pre>';
+print_r($puurid);
+echo '</pre>';
 	
 }
 
