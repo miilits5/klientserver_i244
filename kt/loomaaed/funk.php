@@ -35,7 +35,7 @@ function kuva_puurid(){
 	$row = mysqli_fetch_assoc($tulemus);
 	$puurid = array();
 	
-	echo %row;
+	echo $row;
 
 
 	include_once('views/puurid.html');
