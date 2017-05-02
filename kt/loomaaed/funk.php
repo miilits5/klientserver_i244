@@ -23,12 +23,12 @@ function logout(){
 }
 
 function kuva_puurid(){
-	$tulemus = mysqli_query($connection, "SELECT DISTINCT(puur) FROM ttihhano10142660_loomaaed") or die("Ei saanud baasi utf-8-sse - ".mysqli_error($connection));
-	$kuvaPuurid = array() or die(mysql_error());
+	mysqli_query($connection, "SELECT DISTINCT(puur) FROM ttihhano10142660_loomaaed") or die("Ei saanud puuri valida - ".mysqli_error($connection));
+	$puurid = array() or die(mysql_error());
 	
 	$index = 0;
 	while($row = mysql_fetch_assoc($tulemus)){
-		$kuvaPuurid[$index] = $row;
+		$puurid[$index] = $row;
 		$index++;
 	}
 	echo $kuvaPuurid[1];
