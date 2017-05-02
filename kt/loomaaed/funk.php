@@ -23,6 +23,11 @@ function logout(){
 }
 
 function kuva_puurid(){
+	$host="localhost";
+	$user="test";
+	$pass="t3st3r123";
+	$db="test";
+	$connection = mysqli_connect($host, $user, $pass, $db) or die("ei saa ühendust mootoriga- ".mysqli_error());
 	$kysimine = "SELECT  DISTINCT(puur) FROM ttihhano10142660_loomaaed";
 	$tulemus = mysqli_query($connection, $kysimine);
 	$puurid = array() or die(mysql_error());
