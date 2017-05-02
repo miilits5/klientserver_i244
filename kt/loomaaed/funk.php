@@ -25,7 +25,7 @@ function logout(){
 
 function kuva_puurid(){
 	$SQLorder = "SELECT DISTINCT(puur) FROM ttihhano10142660_loomaaed";
-	$tulemus= mysqli_query($connection, $SQLorder);
+	$tulemus= mysqli_query($connection,$SQLorder);
 	$kuvaPuurid = array() or die(mysql_error());;
 	
 	$index = 0;
