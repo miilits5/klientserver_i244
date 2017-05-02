@@ -33,8 +33,7 @@ function kuva_puurid(){
 	$nimed = "SELECT  FROM ttihhano10142660_loomaaed";
 	$tulemus = mysqli_query($connection, $kysimine);
 	$tulemus2 = mysqli_query($connection, $nimed);
-	$row = mysqli_fetch_assoc($tulemus);
-	$row2 = mysqli_fetch_assoc($tulemus2);
+
 	$puurinr = array();
 	$puurid = array();
 	
