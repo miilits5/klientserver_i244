@@ -26,13 +26,13 @@ function logout(){
 function kuva_puurid(){
 	$SQLorder = "SELECT DISTINCT(puur) FROM ttihhano10142660_loomaaed";
 	$tulemus= mysql_query($SQLorder);
-	$kuvaPuurid = array();
+	$kuvaPuurid = array() or die(mysql_error());;
 	
 	$index = 0;
 	while($row = mysql_fetch_assoc($tulemus)){
 		$kuvaPuurid[$index] = $row;
 		$index++
-	}
+	};
 	// siia on vaja funktsionaalsust
 	
 
