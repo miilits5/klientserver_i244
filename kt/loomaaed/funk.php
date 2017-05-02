@@ -31,21 +31,11 @@ function kuva_puurid(){
 	
 	
 	$kysimine = "SELECT DISTINCT(puur), nimi FROM ttihhano10142660_loomaaed";
-	$kysimine2 = "SELECT DISTINCT(puur) FROM ttihhano10142660_loomaaed";
 	$tulemus = mysqli_query($connection, $kysimine);
-	$tulemus2 = mysqli_query($connection, $kysimine2);
-	$puuri_nr = array() or die(mysql_error());
+	$row = mysqli_fetch_assoc($tulemus);
 	$puurid = array();
 	
-	while($row = mysql_fetch_array($tulemus)){
-		echo $row["nimi"];
-		echo $row["puur"];
-		$puurid[$puuri_nr][] = $loomarida;
-		$puurid[] = $row[];
-	}
-	mysql_free_result($tulemus);
-
-	// siia on vaja funktsionaalsust
+	echo %row;
 
 
 	include_once('views/puurid.html');
