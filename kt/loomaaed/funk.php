@@ -35,7 +35,6 @@ function kuva_puurid(){
 	$row = mysqli_fetch_assoc($tulemus);
 	$puurid = array();
 	
-	echo $row;
 	print_r($row);
 
 
