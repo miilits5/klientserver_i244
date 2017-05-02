@@ -24,7 +24,17 @@ function logout(){
 }
 
 function kuva_puurid(){
+	$SQLorder = "SELECT DISTINCT(puur) FROM ttihhano10142660_loomaaed";
+	$tulemus= mysql_query($SQLorder);
+	$kuvaPuurid = array();
+	
+	$index = 0;
+	while($row = mysql_fetch_assoc($tulemus)){
+		$kuvaPuurid[$index] = $row;
+		$index++
+	}
 	// siia on vaja funktsionaalsust
+	
 
 	include_once('views/puurid.html');
 	
