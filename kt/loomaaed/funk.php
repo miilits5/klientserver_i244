@@ -36,6 +36,7 @@ function kuva_puurid(){
 	$puurid = array();
 	
 	echo $row;
+	print_r($row);
 
 
 	include_once('views/puurid.html');
