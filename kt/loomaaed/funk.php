@@ -22,7 +22,6 @@ function logout(){
 	header("Location: ?");
 }
 
-echo $connection;
 function kuva_puurid(){
 	$SQLorder = "SELECT DISTINCT(puur) FROM ttihhano10142660_loomaaed";
 	$tulemus = mysqli_query($connection, $SQLorder);
