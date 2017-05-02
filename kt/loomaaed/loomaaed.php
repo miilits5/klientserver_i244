@@ -16,6 +16,11 @@ switch($page){
 	break;
 	case "loomad":
 		kuva_puurid();
+		echo '<pre>';
+print_r($puurid);
+print_r($tulemus);
+print_r($kysimine);
+echo '</pre>';
 	break;
 	case "logout":
 		logout();
