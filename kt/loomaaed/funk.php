@@ -39,11 +39,11 @@ function kuva_puurid(){
 	
 	while ($row = mysqli_fetch_assoc($tulemus)){
 		$puurinr[] = $row;
-		$puurid[$puurinr][] = $row['nimi'];
+		$puurid[$puurinr][] = $nimed['nimi'];
 
 	}
 	print_r($puurinr);
-	//print_r($puurid);
+	print_r($puurid);
 	
 
 	include_once('views/puurid.html');
