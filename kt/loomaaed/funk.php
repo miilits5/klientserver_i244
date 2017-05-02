@@ -23,17 +23,19 @@ function logout(){
 }
 
 function kuva_puurid(){
-	mysqli_query($connection, "SELECT DISTINCT(puur) FROM ttihhano10142660_loomaaed") or die("Ei saanud puuri valida - ".mysqli_error($connection));
+	$kysimine = "SELECT  DISTINCT(puur) FROM ttihhano10142660_loomaaed";
+	$tulemus = mysqli_query($kysimine);
 	$puurid = array() or die(mysql_error());
 	
-	$index = 0;
-	while($row = mysql_fetch_assoc($tulemus)){
-		$puurid[$index] = $row;
-		$index++;
+	while($row = mysql_fetch_array($tulemus, MYSQL_ASSOC)){
+		array_push($puurid,$row);
 	}
-	echo $kuvaPuurid[1];
+	mysql_free_result($tulemus);
+
 	// siia on vaja funktsionaalsust
-	
+	echo '<pre>';
+print_r($puurid);
+echo '</pre>';
 
 	include_once('views/puurid.html');
 	
