@@ -30,15 +30,18 @@ function kuva_puurid(){
 	$connection = mysqli_connect($host, $user, $pass, $db) or die("ei saa ühendust mootoriga- ".mysqli_error());
 	
 	
-	$kysimine = "SELECT  DISTINCT(puur) FROM ttihhano10142660_loomaaed";
+	$kysimine = "SELECT DISTINCT(puur), nimi FROM ttihhano10142660_loomaaed";
+	$kysimine2 = "SELECT DISTINCT(puur) FROM ttihhano10142660_loomaaed";
 	$tulemus = mysqli_query($connection, $kysimine);
-	$puurid = array() or die(mysql_error());
+	$tulemus2 = mysqli_query($connection, $kysimine2);
+	$puuri_nr = array() or die(mysql_error());
+	$puurid = array();
 	
-	while($row = mysql_fetch_array($tulemus, MYSQL_ASSOC)){
+	while($row = mysql_fetch_array($tulemus)){
 		echo $row["nimi"];
 		echo $row["puur"];
-		echo $row["liik"];
-		array_push($puurid, $row);
+		$puurid[$puuri_nr][] = $loomarida;
+		$puurid[] = $row[];
 	}
 	mysql_free_result($tulemus);
 
