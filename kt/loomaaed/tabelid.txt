@@ -18,3 +18,14 @@ INSERT INTO `ttihhano10142660_loomaaed` (`id`, `nimi`, `puur`, `liik`) VALUES
 (9, 'Maali', 7, 'pildid/cow.png'),
 (10, 'Kasper', 7, 'pildid/cow.png'),
 (11, 'Mingi', 7, 'pildid/cow.png');
+
+SELECT t1.ID
+FROM ttihhano10142660_loomaaed t1
+    LEFT JOIN Table2 t2 ON t1.ID = t2.ID
+WHERE t2.ID IS NULL
+
+SELECT nimi FROM ttihhano10142660_loomaaed where DISTINCT(puur);
+
+SELECT nimi, puur FROM ttihhano10142660_loomaaed GROUP BY nimi ORDER BY COUNT(puur) desc;
+
+SELECT puur, GROUP_CONCAT(nimi SEPARATOR ', ') FROM ttihhano10142660_loomaaed GROUP BY puur;
