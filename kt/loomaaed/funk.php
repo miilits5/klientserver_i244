@@ -29,7 +29,6 @@ function kuva_puurid(){
 	$db="test";
 	$connection = mysqli_connect($host, $user, $pass, $db) or die("ei saa ühendust mootoriga- ".mysqli_error());
 	
-	SELECT DISTINCT(CONCAT(puur,b)) AS cc FROM my_table GROUP BY (cc);
 	$kysimine = "SELECT DISTINCT(puur) FROM ttihhano10142660_loomaaed";
 	$nimed = "SELECT nimi FROM ttihhano10142660_loomaaed";
 	$tulemus = mysqli_query($connection, $kysimine);
