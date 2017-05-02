@@ -33,6 +33,7 @@ function kuva_puurid(){
 		$kuvaPuurid[$index] = $row;
 		$index++;
 	}
+	echo $kuvaPuurid[1];
 	// siia on vaja funktsionaalsust
 	
 
