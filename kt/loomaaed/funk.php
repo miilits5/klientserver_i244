@@ -31,7 +31,7 @@ function kuva_puurid(){
 	
 	
 	$kysimine = "SELECT DISTINCT(puur) FROM ttihhano10142660_loomaaed";
-	$nimed = "SELECT nimi FROM ttihhano10142660_loomaaed"
+	$nimed = "SELECT nimi FROM ttihhano10142660_loomaaed";
 	$tulemus = mysqli_query($connection, $kysimine);
 	$tulemus2 = mysqli_query($connection, $nimed);
 	$row = mysqli_fetch_assoc($tulemus);
