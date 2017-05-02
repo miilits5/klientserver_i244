@@ -32,7 +32,7 @@ function kuva_puurid(){
 	while($row = mysql_fetch_assoc($tulemus)){
 		$kuvaPuurid[$index] = $row;
 		$index++
-	};
+	}
 	// siia on vaja funktsionaalsust
 	
 
