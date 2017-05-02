@@ -29,7 +29,7 @@ function kuva_puurid(){
 	$db="test";
 	$connection = mysqli_connect($host, $user, $pass, $db) or die("ei saa ühendust mootoriga- ".mysqli_error());
 	
-	$kysimine = "SELECT DISTINCT(puur), nimi FROM ttihhano10142660_loomaaed";
+	$kysimine = "SELECT DISTINCT(puur) FROM ttihhano10142660_loomaaed";
 	$nimed = "SELECT * FROM ttihhano10142660_loomaaed where nimi = ?";
 	$tulemus = mysqli_query($connection, $kysimine);
 	$tulemus2 = mysqli_query($connection, $nimed);
