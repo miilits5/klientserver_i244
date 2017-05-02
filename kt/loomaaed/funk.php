@@ -35,6 +35,10 @@ function kuva_puurid(){
 	$puurid = array() or die(mysql_error());
 	
 	while($row = mysql_fetch_array($tulemus, MYSQL_ASSOC)){
+		echo $row["nimi"];
+		echo $row["puur"];
+		echo $row["liik"];
+}
 		array_push($puurid, $row);
 	}
 	mysql_free_result($tulemus);
