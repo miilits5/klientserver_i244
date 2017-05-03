@@ -42,7 +42,7 @@ function kuva_puurid(){
 
 	}
 	while ($row2 = mysqli_fetch_assoc($tulemus2)){
-		$puurid[$puurinr][] = $row2[nimed];
+		$puurid[$puurinr][] = $row2["nimed"];
 
 	}
 	
