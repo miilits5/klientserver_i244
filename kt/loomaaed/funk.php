@@ -39,7 +39,7 @@ function kuva_puurid(){
 	$loomarida = array();
 	
 	while ($row = mysqli_fetch_assoc($tulemus)){
-		$puurinr[] = $row;
+		$puurid[$puuri_nr][] = = $row;
 		
 	
 	}
@@ -47,11 +47,9 @@ function kuva_puurid(){
 			$puurid[] = $row2;
 
 	}
-	$puurid[$puurinr][] = $loomarida;
 	
 	print_r($puurinr);
 	print_r($puurid);
-	print_r($loomarida);
 
 	include_once('views/puurid.html');
 	
