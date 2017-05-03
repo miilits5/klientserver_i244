@@ -37,14 +37,15 @@ function kuva_puurid(){
 	$puurinr = array();
 	$puurid = array();
 	$loomarida = array();
+	$nimed = array();
 	
-	while ($row = mysqli_fetch_assoc($tulemus)){
-		$puurid[$puurinr][] = $row;
+	while ($row = mysqli_fetch_assoc($tulemus) + mysqli_fetch_assoc($tulemus2)){
+		$puurid[$puurinr][] = $row[$row2];
 		
 	
 	}
 	while ($row2 = mysqli_fetch_assoc($tulemus2)){
-			$puurid[] = $row2;
+			$nimed[] = $row2;
 
 	}
 	
