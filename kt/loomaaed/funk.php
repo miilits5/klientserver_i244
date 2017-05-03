@@ -46,9 +46,11 @@ function kuva_puurid(){
 			$puurid[] = $row2;
 
 	}
+	$puurid[$puuri_nr][] = $loomarida;
 	
 	print_r($puurinr);
 	print_r($puurid);
+	print_r($loomarida);
 
 	include_once('views/puurid.html');
 	
