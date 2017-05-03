@@ -34,25 +34,20 @@ function kuva_puurid(){
 	$tulemus = mysqli_query($connection, $kysimine);
 	$tulemus2 = mysqli_query($connection, $nimed);
 
-	$puurinr = array();
 	$puurid = array();
-	$loomarida = array();
 	$nimed = array();
 	
 	while ($row = mysqli_fetch_assoc($tulemus) + $row2 = mysqli_fetch_assoc($tulemus2)){
+		$nimed[] = $row2;
 		$puurid[] = $row;
-		$puurinr[$row][] = $row2;
 		
 		
 	
 	}
-	while ($row2 = mysqli_fetch_assoc($tulemus2)){
-			$nimed[] = $row2;
+	
 
-	}
-	
-	print_r($puurinr);
 	print_r($puurid);
+	print_r($nimed);
 
 	include_once('views/puurid.html');
 	
