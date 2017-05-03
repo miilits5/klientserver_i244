@@ -39,7 +39,7 @@ function kuva_puurid(){
 	$loomarida = array();
 	$nimed = array();
 	
-	while ($row = mysqli_fetch_assoc($tulemus), $row2 = mysqli_fetch_assoc($tulemus2)){
+	while ($row = mysqli_fetch_assoc($tulemus) + $row2 = mysqli_fetch_assoc($tulemus2)){
 		$puurid[] = $row;
 		
 	
