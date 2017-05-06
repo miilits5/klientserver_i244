@@ -31,7 +31,7 @@ if (isset($_GET['piirnurk']) )
 <head>
 
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <title>Kodutöö nr1</title>
+  <title>Kodutöö nr10</title>
   <meta name="description" content="Tarvi Kodutööd">
   <meta name="author" content="Tarvi TIhhanov">
 
@@ -85,7 +85,7 @@ if (isset($_GET['piirnurk']) )
 </head>
 
 <body>
-<h1>KODUTÖÖ nr11</h1>
+<h1>KODUTÖÖ nr10</h1>
 <?php 
 
     $stiilid=array("solid", "dashed", "dotted", "none", "double", "hidden", "ridge");
